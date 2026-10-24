@@ -1,0 +1,65 @@
+[
+  {
+    "senha": "123456",
+    "tamanho": "6 caracteres",
+    "tipos": "números",
+    "combinacoes": "1,0 × 10^6",
+    "tempo": "menos de 1 segundo",
+    "previsibilidade": "Sim: contém palavra comum, ano, sequência ou repetição",
+    "classificacao": "Fraca"
+  },
+  {
+    "senha": "PortoDaBarra2026",
+    "tamanho": "16 caracteres",
+    "tipos": "minúsculas, maiúsculas, números",
+    "combinacoes": "4,8 × 10^28",
+    "tempo": "mais de 1 milhão de anos",
+    "previsibilidade": "Sim: contém palavra comum, ano, sequência ou repetição",
+    "classificacao": "Fraca"
+  },
+  {
+    "senha": "aluguel",
+    "tamanho": "7 caracteres",
+    "tipos": "minúsculas",
+    "combinacoes": "8,0 × 10^9",
+    "tempo": "menos de 1 segundo",
+    "previsibilidade": "Sim: contém palavra comum, ano, sequência ou repetição",
+    "classificacao": "Fraca"
+  },
+  {
+    "senha": "Chave#Mar",
+    "tamanho": "9 caracteres",
+    "tipos": "minúsculas, maiúsculas, símbolos",
+    "combinacoes": "2,3 × 10^17",
+    "tempo": "268 dias",
+    "previsibilidade": "Não encontrado nos padrões verificados",
+    "classificacao": "Média"
+  },
+  {
+    "senha": "C@s4!Brr",
+    "tamanho": "8 caracteres",
+    "tipos": "minúsculas, maiúsculas, números, símbolos",
+    "combinacoes": "6,6 × 10^15",
+    "tempo": "8 dias",
+    "previsibilidade": "Não encontrado nos padrões verificados",
+    "classificacao": "Fraca"
+  },
+  {
+    "senha": "ladeira cuscuz farol varanda",
+    "tamanho": "28 caracteres",
+    "tipos": "minúsculas, símbolos",
+    "combinacoes": "3,8 × 10^49",
+    "tempo": "mais de 1 milhão de anos",
+    "previsibilidade": "Não encontrado nos padrões verificados",
+    "classificacao": "Forte"
+  },
+  {
+    "senha": "Nuvem!Tijolo!Cacto!Violino",
+    "tamanho": "26 caracteres",
+    "tipos": "minúsculas, maiúsculas, símbolos",
+    "combinacoes": "1,5 × 10^50",
+    "tempo": "mais de 1 milhão de anos",
+    "previsibilidade": "Não encontrado nos padrões verificados",
+    "classificacao": "Forte"
+  }
+]

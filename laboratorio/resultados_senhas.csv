@@ -1,0 +1,8 @@
+﻿senha,tamanho,tipos,combinacoes,tempo,previsibilidade,classificacao
+123456,6 caracteres,números,"1,0 × 10^6",menos de 1 segundo,"Sim: contém palavra comum, ano, sequência ou repetição",Fraca
+PortoDaBarra2026,16 caracteres,"minúsculas, maiúsculas, números","4,8 × 10^28",mais de 1 milhão de anos,"Sim: contém palavra comum, ano, sequência ou repetição",Fraca
+aluguel,7 caracteres,minúsculas,"8,0 × 10^9",menos de 1 segundo,"Sim: contém palavra comum, ano, sequência ou repetição",Fraca
+Chave#Mar,9 caracteres,"minúsculas, maiúsculas, símbolos","2,3 × 10^17",268 dias,Não encontrado nos padrões verificados,Média
+C@s4!Brr,8 caracteres,"minúsculas, maiúsculas, números, símbolos","6,6 × 10^15",8 dias,Não encontrado nos padrões verificados,Fraca
+ladeira cuscuz farol varanda,28 caracteres,"minúsculas, símbolos","3,8 × 10^49",mais de 1 milhão de anos,Não encontrado nos padrões verificados,Forte
+Nuvem!Tijolo!Cacto!Violino,26 caracteres,"minúsculas, maiúsculas, símbolos","1,5 × 10^50",mais de 1 milhão de anos,Não encontrado nos padrões verificados,Forte

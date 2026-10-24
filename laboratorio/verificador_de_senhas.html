@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verificador de Senhas (prática Porto da Barra)</title>
+<!-- Ferramenta didática: roda só no navegador, nada é enviado. -->
+<style>
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#eef2f6;color:#222}
+  header{background:#0b3d6e;color:#fff;padding:12px 18px}
+  header small{display:block;opacity:.85;margin-top:3px}
+  main{background:#fff;max-width:720px;margin:18px auto;padding:18px;border-radius:8px}
+  .aviso{background:#fff6d6;border:1px solid #e5c55a;padding:8px 10px;border-radius:6px;font-size:13px;margin-bottom:14px}
+  input{width:100%;max-width:440px;padding:9px;font-size:16px;margin:6px 0 12px;border:1px solid #aaa;border-radius:6px}
+  .medidor{height:14px;max-width:440px;background:#eee;border-radius:7px;overflow:hidden}
+  .medidor i{display:block;height:100%;width:0;background:#c00;transition:width .2s}
+  table{border-collapse:collapse;margin-top:14px;font-size:14px}
+  td{padding:5px 10px;border-bottom:1px solid #eee}
+  td:first-child{color:#555}
+  p.nota{font-size:12px;color:#666}
+</style>
+</head>
+<body>
+<header><b>Verificador de força de senha</b>
+<small>Prática de Introdução à Segurança da Informação · Caso Imobiliária Porto da Barra (fictício) · Prof. Alexmário Modesto de Jesus</small></header>
+<main>
+  <div class="aviso"><b>Não digite a sua senha real.</b> Invente senhas parecidas com as que as pessoas costumam usar. Nada do que você digitar sai desta página.</div>
+  <label for="pw">Senha de teste:</label><br>
+  <input id="pw" type="text" autocomplete="off" oninput="avaliar()" placeholder="ex.: PortoDaBarra2026">
+  <div class="medidor"><i id="bar"></i></div>
+  <table>
+    <tr><td>Tamanho</td><td id="r_tam">-</td></tr>
+    <tr><td>Tipos de caractere usados</td><td id="r_tipos">-</td></tr>
+    <tr><td>Combinações possíveis</td><td id="r_comb">-</td></tr>
+    <tr><td>Tempo estimado de força bruta *</td><td id="r_tempo">-</td></tr>
+    <tr><td>Parece senha comum ou previsível?</td><td id="r_comum">-</td></tr>
+    <tr><td>Classificação</td><td id="r_class">-</td></tr>
+  </table>
+  <p class="nota">* Estimativa didática: um atacante testando 10 bilhões de combinações por segundo, sem usar dicionário. Senhas comuns ou baseadas em nomes, palavras e datas caem muito mais rápido do que o número mostrado, porque o atacante tenta essas primeiro.</p>
+</main>
+<script>
+const COMUNS=["123456","12345678","123456789","senha","senha123","qwerty","abc123","111111","000000","admin","admin123","portodabarra","porto","imobiliaria","aluguel","bahia","salvador","brasil","flamengo","bahia123","iloveyou","password"];
+function fmt(n){if(n<1e4)return Math.round(n).toLocaleString('pt-BR');const e=Math.floor(Math.log10(n));return (n/Math.pow(10,e)).toFixed(1).replace('.',',')+' × 10^'+e;}
+function tempo(s){
+  if(s<1)return'menos de 1 segundo';
+  const u=[['anos',31536000],['dias',86400],['horas',3600],['minutos',60],['segundos',1]];
+  for(const [n,v] of u){if(s>=v){const x=s/v;if(n==='anos'&&x>1e6)return 'mais de 1 milhão de anos';return Math.round(x).toLocaleString('pt-BR')+' '+n;}}
+}
+function avaliar(){
+  const s=document.getElementById('pw').value;
+  if(!s){['r_tam','r_tipos','r_comb','r_tempo','r_comum','r_class'].forEach(i=>document.getElementById(i).textContent='-');document.getElementById('bar').style.width='0';return;}
+  let cs=0,t=[];
+  if(/[a-z]/.test(s)){cs+=26;t.push('minúsculas');}
+  if(/[A-Z]/.test(s)){cs+=26;t.push('maiúsculas');}
+  if(/[0-9]/.test(s)){cs+=10;t.push('números');}
+  if(/[^A-Za-z0-9]/.test(s)){cs+=33;t.push('símbolos');}
+  const comb=Math.pow(cs,s.length), seg=comb/1e10;
+  const low=s.toLowerCase();
+  const comum=COMUNS.some(c=>low.includes(c))||/(19|20)\d\d/.test(s)||/(.)\1\1/.test(s)||/1234|abcd|qwer/.test(low);
+  const ano=31536000;
+  let cls,nota;
+  if(comum||seg<30*86400){cls='Fraca';nota=20;}
+  else if(seg<100*ano){cls='Média';nota=45;}
+  else if(seg<1e6*ano){cls='Boa';nota=70;}
+  else{cls='Forte';nota=100;}
+  document.getElementById('r_tam').textContent=s.length+' caracteres';
+  document.getElementById('r_tipos').textContent=t.join(', ');
+  document.getElementById('r_comb').textContent=fmt(comb);
+  document.getElementById('r_tempo').textContent=tempo(seg);
+  document.getElementById('r_comum').textContent=comum?'Sim: contém palavra comum, ano, sequência ou repetição':'Não encontrado nos padrões verificados';
+  document.getElementById('r_class').textContent=cls;
+  const b=document.getElementById('bar');b.style.width=nota+'%';b.style.background=nota<30?'#c00':nota<55?'#e69a00':nota<75?'#7aa300':'#1a8f3c';
+}
+</script>
+</body>
+</html>
