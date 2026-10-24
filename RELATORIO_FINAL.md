@@ -141,9 +141,9 @@ O programa não consulta credenciais vazadas, não normaliza leet speak e não m
 
 | Probabilidade / Impacto | Risco |
 | --- | --- | --- | --- |
-| Alta | Crítico |
-| Média | Alto |
-| Baixa | Moderado |
+| Alta  |  Crítico |
+| Média |  Alto |
+| Baixa |  Moderado |
 
 **Critérios propostos:** probabilidade alta quando a exposição permanece e favorece recorrência; média quando existe condição de risco, mas sua frequência não é conhecida; baixa quando pouco provável sob as condições avaliadas. Impacto alto envolve exposição de dados pessoais, integridade financeira ou interrupção relevante; médio significa efeito operacional limitado; baixo significa efeito restrito e facilmente reversível. Não há quantificação de perdas ou interrupções.
 
