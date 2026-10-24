@@ -66,3 +66,7 @@ Não será atribuida nenhuma assinatura nos arquivos, e o projeto permanecera em
 ## Integridade
 
 O manifesto SHA-256 registra os arquivos desta versão final, inclusive o mapa fornecido pelo autor. O próprio manifesto não integra sua lista de hashes. Alterações posteriores modificam os respectivos hashes.
+
+## Index.html
+
+O Arquivo index é um dashboard que une os dados e traz uma visualização interativa das conclusões do autor, para que o professor possa fazer sua analise de maneira interativa, criado com o intuito de ótimizar os resultados da análise, organizar os dados e surpreender o professor em busca de um bom feedback.
