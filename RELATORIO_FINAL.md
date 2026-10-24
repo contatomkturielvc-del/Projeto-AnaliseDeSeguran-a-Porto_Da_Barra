@@ -139,11 +139,11 @@ O programa não consulta credenciais vazadas, não normaliza leet speak e não m
 
 > **Proposta de priorização:** a fonte não contém probabilidades medidas nem valores financeiros. A matriz representa julgamento qualitativo sobre o cenário e deverá ser validada antes de uma aplicação real. Os incidentes já relatados são tratados como ocorrências fictícias; a probabilidade abaixo refere-se à recorrência ou materialização futura.
 
-| Probabilidade / Impacto | Baixo | Médio | Alto |
+| Probabilidade / Impacto | Risco |
 | --- | --- | --- | --- |
-| Alta | Moderado | Alto | Crítico |
-| Média | Baixo | Moderado | Alto |
-| Baixa | Baixo | Baixo | Moderado |
+| Alta | Crítico |
+| Média | Alto |
+| Baixa | Moderado |
 
 **Critérios propostos:** probabilidade alta quando a exposição permanece e favorece recorrência; média quando existe condição de risco, mas sua frequência não é conhecida; baixa quando pouco provável sob as condições avaliadas. Impacto alto envolve exposição de dados pessoais, integridade financeira ou interrupção relevante; médio significa efeito operacional limitado; baixo significa efeito restrito e facilmente reversível. Não há quantificação de perdas ou interrupções.
 
