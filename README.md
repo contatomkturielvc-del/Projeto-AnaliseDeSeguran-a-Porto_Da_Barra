@@ -19,7 +19,7 @@ Entrega acadêmica de **Uriel Vieira Carvalho**, para a disciplina **Introduçã
 
 O [mapa mental em Excalidraw](mapa/mapa_mental.excalidraw) fornecido pelo autor após suas alterações manuais e está preservado integralmente. Para visualizá-lo ou editá-lo, abra [Excalidraw](https://excalidraw.com), use **Abrir** e selecione o arquivo, ou arraste-o para a tela. O GitHub não renderiza o formato nativo como imagem.
 
-O SVG Integrado no arquivo fornece uma visualização prática e não editável, para fins de apresentação do projeto, entendimento do procedimento utilizado pelo autor para efetuar as conclusões necessárias para conclusão do projeto!
+O SVG Integrado no arquivo fornece uma visualização prática e não editável, para fins de apresentação do projeto, entendimento do procedimento utilizado pelo autor para efetuar as conclusões necessárias para finalizar o projeto!
 
 ## Organização
 
