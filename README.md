@@ -51,7 +51,7 @@ Abra `laboratorio/verificador_de_senhas.html` localmente no navegador. Utilize s
 
 ## GitHub e formatos
 
-Para usar esta pasta como raiz de um repositório, extraia o ZIP e envie **o conteúdo da pasta**, preservando os subdiretórios. Assim o README aparecerá na página inicial. Nenhum repositório foi criado ou publicado por esta preparação.
+Para usar esta pasta como raiz de um repositório, extraia o ZIP e envie **o conteúdo da pasta**, preservando os subdiretórios. Assim o README aparecerá na página inicial. 
 
 Os documentos finais permanecem editáveis em Markdown, XLSX, Excalidraw, SVG, HTML, CSV e JSON. O modo escuro de Markdown depende do leitor. Diagramas Mermaid e seus recursos interativos dependem do renderizador e de suas políticas; as tabelas e descrições preservam a informação sem interatividade. O SVG de status é local e não depende de conexão externa.
 
